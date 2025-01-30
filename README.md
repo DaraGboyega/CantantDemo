@@ -1,97 +1,125 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# CantantDemo
 
-# Getting Started
+A simple yet powerful React Native app for tracking your personal finances. Cantant helps you monitor your cash flow by recording income and expenses with a clean, user-friendly interface.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- 💰 Track income and expenses
+- 📊 View current balance at a glance
+- 📝 Add detailed transaction descriptions
+- 📱 Clean and intuitive user interface
+- 🔄 Real-time balance updates
+- 📅 Transaction history with dates
+- 💾 Local SQLite storage for data persistence
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Technology Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- React Native
+- SQLite (react-native-sqlite-storage)
+- Recoil (State Management)
+- React Navigation
+- React Native Vector Icons
 
-```sh
-# Using npm
-npm start
+## Prerequisites
 
-# OR using Yarn
-yarn start
+Before you begin, ensure you have the following installed:
+- Node.js (v12 or later)
+- npm or yarn
+- React Native development environment
+  - For iOS: Xcode (Mac only)
+  - For Android: Android Studio and Android SDK
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/cantant.git
+cd cantant
 ```
 
-## Step 2: Build and run your app
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+3. Install iOS dependencies (Mac only):
+```bash
+cd ios
+pod install
+cd ..
+```
 
-### Android
+4. Start the application:
+```bash
+# For iOS
+npm run ios
+# or
+yarn ios
 
-```sh
-# Using npm
+# For Android
 npm run android
-
-# OR using Yarn
+# or
 yarn android
 ```
 
-### iOS
+## Project Structure
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```
+cantant/
+├── src/
+│   ├── components/      # Reusable components
+│   ├── screens/         # Screen components
+│   ├── database/        # SQLite database setup and queries
+│   └── state/          # Recoil state management
+├── ios/                 # iOS native code
+└── android/            # Android native code
 ```
 
-Then, and every time you update your native dependencies, run:
+## Key Features Explained
 
-```sh
-bundle exec pod install
-```
+### Transaction Management
+- Add new transactions with type (income/expense)
+- Input validation for amount and description
+- Automatic date tracking
+- Real-time balance updates
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### Data Persistence
+- Local SQLite database
+- Automatic database initialization
+- Efficient query operations
 
-```sh
-# Using npm
-npm run ios
+### User Interface
+- Bottom tab navigation
+- Transaction list with visual type indicators
+- Loading states and error handling
+- Form validation with user feedback
 
-# OR using Yarn
-yarn ios
-```
+## Contributing
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## License
 
-## Step 3: Modify your app
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Now that you have successfully run the app, let's make changes!
+## Acknowledgments
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- React Native community
+- React Navigation team
+- Recoil team
+- SQLite contributors
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## Contact
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+Project Link: [https://https://github.com/DaraGboyega/CantantDemo](https://https://github.com/DaraGboyega/CantantDemo)
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Made with ❤️ using React Native
